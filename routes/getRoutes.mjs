@@ -14,14 +14,14 @@ const __dirname = path.dirname(__filename);
 
 router.get("/", async (req, res) => {
   // Query SQL (PostgreSQL)
-  const query = "SELECT * FROM employees";
-  const sqlRes = await pool.query(query);
+  // const query = "SELECT * FROM employees";
+  // const sqlRes = await pool.query(query);
 
-  console.log(sqlRes.rows);
-  const plainPassword = "hashed_password_2";
-  const hashedPassword = await bcrypt.hash(plainPassword, saltRounds);
-  console.log("Hashed Password:", hashedPassword);
-  res.json(sqlRes.rows);
+  // console.log(sqlRes.rows);
+  // const plainPassword = "hashed_password_2";
+  // const hashedPassword = await bcrypt.hash(plainPassword, saltRounds);
+  // console.log("Hashed Password:", hashedPassword);
+  res.json("Hello World");
 });
 
 router.get("/adminsettings", async (req, res) => {

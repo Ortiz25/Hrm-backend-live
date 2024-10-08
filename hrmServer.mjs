@@ -24,14 +24,7 @@ const saltRounds = 10; // Number of salt rounds
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const corsOptions = {
-  origin: "https://hrmlive.livecrib.pro", // Frontend domain
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true, // If you need to send cookies
-  optionsSuccessStatus: 204,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 app.use("/api", getRoutes);
 app.use("/api", postRoutes);
